@@ -356,3 +356,227 @@ a {
   padding: 24px 0;
 }
 /* testimonial section style end here */
+/* ========================== */
+/* testimonial section style start here */
+.all-reviews {
+  padding-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px;
+}
+.reviews {
+  max-width: 384px;
+  width: fit-content;
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid #cbd5e1;
+}
+.star-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.fa-star,
+.fa-star-half-stroke {
+  color: #f59e0b;
+  width: 24px;
+}
+.reviews-pera {
+  padding: 24px 0;
+}
+.reviewer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.reviewer img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.reviewer-details {
+  text-align: left;
+}
+.reviewer-name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
+/* testimonial section end start here */
+/* ============================ */
+/* Our office section style start here */
+.all-office {
+  padding-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+}
+.office-heading {
+  padding: 24px 0;
+}
+.office {
+  width: 280px;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid #cbd5e1;
+}
+.fa-location-dot {
+  color: #4f46e5;
+  font-size: 24px;
+}
+.location-name {
+  padding: 24px 0 8px;
+}
+/* Our office section style end here */
+/* ============================ */
+/* FAQ section style start here */
+.faq-container {
+  text-align: center;
+  width: 800px;
+}
+.faq-heading {
+  padding: 24px 0;
+}
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  padding-top: 48px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #cbd5e1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  transition: background 0.3s;
+}
+.question-1stPart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.faq-question:hover {
+  background: #e0e0e0;
+}
+
+.faq-question .fa-circle-question {
+  color: var(--text-color2); /* Purple icon color */
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+.fa-angle-down {
+  font-size: 24px;
+  color: #94a3b8;
+}
+.question {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 22px;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  text-align: left;
+}
+
+.faq-answer p {
+  padding: 15px;
+  margin: 0;
+}
+
+.faq-item.active .faq-question {
+  background: #e0e0e0;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+/* FAQ section style end here */
+/* ============================ */
+/* download the app section style start here */
+.downloadApp-pera {
+  width: 560px;
+  padding: 24px 0 48px;
+}
+.downloadApp-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.downloadApp-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.downloadApp-img {
+  position: relative; /* Container for absolute positioning */
+  width: 100%; /* Adjust based on layout */
+  height: 300px; /* Set a height (adjust as needed) */
+}
+
+/* First image - fully left */
+.downloadApp-1stImg {
+  position: absolute;
+  left: 0; /* Stick to the left edge */
+  bottom: 0; /* Align to bottom (or adjust as needed) */
+  z-index: 1; /* Ensure it stays below the 2nd image */
+}
+
+.downloadApp-1stImg img {
+  width: 100%; /* Adjust width as needed */
+  max-width: 400px; /* Prevent overstretching */
+  height: auto;
+}
+
+/* Second image - overlapping right */
+.downloadApp-2ndImg {
+  position: absolute;
+  top: -10%; /* Move 10% above container */
+  right: 20%; /* Move 20% outside container */
+  z-index: 2; /* Ensure it overlaps on top */
+}
+
+.downloadApp-2ndImg img {
+  width: 100%; /* Adjust width as needed */
+  max-width: 300px; /* Prevent overstretching */
+  height: auto;
+}
+/* download the app section end start here */

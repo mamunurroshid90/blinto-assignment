@@ -329,4 +329,30 @@ a {
   width: 592px;
   height: 592px;
 }
+.whoIsIt-category {
+  position: relative;
+  padding-left: 28px;
+}
+
+.whoIs-verticaleLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #e0e7ff;
+}
+.whoIsIt-category:hover > .whoIs-verticaleLine {
+  background-color: var(--textAndButton-color);
+  transition: all 0.5s ease-in-out;
+}
 /* who is it for section style end here */
+/* ================================= */
+/* testimonial section style start here */
+.testimonial-container {
+  text-align: center;
+}
+.testimonial-heading {
+  padding: 24px 0;
+}
+/* testimonial section style end here */

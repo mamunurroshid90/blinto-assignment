@@ -45,7 +45,7 @@ a {
   padding: 96px 0;
 }
 .secondary-section {
-  width: 1216px;
+  max-width: 1216px;
   margin: 0 auto;
   padding: 64px 0;
 }
@@ -344,9 +344,6 @@ a {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
-  .banner-section {
-    padding: 96px 0;
-  }
   .banner-title {
     font-size: 60px;
     line-height: 68px;
@@ -365,6 +362,7 @@ a {
 
   .banner-img {
     margin-top: 50px;
+    max-width: 1008px;
   }
   .banner-img {
     margin-top: 40px;
@@ -383,7 +381,7 @@ a {
   .banner-img2 {
     position: absolute;
     top: 25%;
-    right: 21%;
+    right: 0%;
     height: 467px;
     max-width: 230px;
   }
@@ -398,40 +396,53 @@ a {
 /* company name section style satart here */
 .companyName-section {
   background-color: var(--section-color2);
+  padding: 0 16px;
 }
-.companyName-container {
-  margin: 64px 16px;
-}
+
 .company-logo {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  justify-items: center;
   align-items: center;
-  justify-content: space-between;
-  row-gap: 32px;
 }
+
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .company-logo img {
-  width: 96px;
+  width: auto;
+  max-width: 96px;
   height: 64px;
-  object-fit: cover;
+  object-fit: contain;
 }
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .company-logo {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+  }
+
+  .company-logo img {
+    width: 144px;
+    height: 96px;
+  }
+}
+
 /* company name section style end here */
 /* =========================== */
 /* features section style start here */
 /* Features Section - Mobile First Approach */
-.features-section {
-  width: 100%;
-}
 
 .features-container {
   text-align: center;
-  max-width: 1216px;
-  margin: 0 auto;
-  padding: 64px 16px;
 }
-
 .section-title {
-  font-size: 1rem;
-  font-weight: 600;
   display: inline-block;
 }
 
@@ -447,26 +458,15 @@ a {
   line-height: 1.5;
   margin: 0 auto;
   max-width: 100%;
-  padding-bottom: 20px;
+  padding: 0 16px 20px 16px;
 }
 
 .features-category {
-  padding-top: 40px;
+  padding: 40px 16px 0 16px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;
 }
-
-/* .feature {
-  padding: 20px;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-} */
 
 .feature img {
   width: 64px;
@@ -482,95 +482,41 @@ a {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
-  .features-section {
-    padding: 60px 30px;
-  }
-
-  .features-heading {
-    font-size: 2rem;
-  }
-
-  .features-pera {
-    max-width: 80%;
-  }
-
-  .features-category {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .feature img {
-    width: 70px;
-    height: 70px;
-  }
-}
-
-/* Desktop Styles */
-@media (min-width: 1024px) {
-  .features-section {
-    padding: 80px 40px;
-  }
-
-  .features-heading {
-    font-size: 2.5rem;
-    padding: 30px 0;
-  }
-
   .features-pera {
     max-width: 800px;
-    font-size: 1.1rem;
   }
 
   .features-category {
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    padding-top: 64px;
   }
-
-  .feature {
-    width: 100%;
-    max-width: 384px;
+  .features-heading {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 24px 0;
+    line-height: 44px;
   }
 
   .feature img {
     width: 80px;
     height: 80px;
   }
-
-  .cart-header {
-    font-size: 1.5rem;
-    padding: 20px 0 8px;
-  }
 }
 
-/* Large Desktop Adjustments */
-@media (min-width: 1440px) {
-  .features-section {
-    padding: 100px 0;
-  }
-}
 /* features section style end here */
 /* ================================ */
 /* statistics section styles start here */
-/* Statistics Section - Mobile First Approach */
 .statistics-section {
-  padding: 40px 20px;
-  width: 100%;
-}
-
-.primary-section {
-  /* Add your primary section styles here */
+  background-color: var(--section-color2);
 }
 
 .statistics-container {
   text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .statistics-icon {
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background-color: #eef2ff;
   margin: 0 auto;
@@ -580,8 +526,8 @@ a {
 }
 
 .statistics-icon img {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 }
 
 .statistics-heading {
@@ -594,9 +540,7 @@ a {
 
 .statistics-pera {
   font-size: 18px;
-  /* line-height: 1.5; */
   margin: 0 auto;
-  /* padding: 0 20px 40px; */
   max-width: 100%;
 }
 
@@ -640,13 +584,9 @@ a {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
-  .statistics-section {
-    padding: 60px 30px;
-  }
-
   .statistics-heading {
-    font-size: 2rem;
-    max-width: 80%;
+    font-size: 36px;
+    line-height: 44px;
   }
 
   .statistics-pera {
@@ -656,89 +596,33 @@ a {
   }
 
   .statistics {
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
   }
-
-  .statistic {
-    width: calc(50% - 20px);
+  .statistics-icon {
+    width: 56px;
+    height: 56px;
   }
-}
-
-/* Desktop Styles */
-@media (min-width: 1024px) {
-  .statistics-section {
-    padding: 80px 40px;
-  }
-
-  .statistics-heading {
-    font-size: 2.5rem;
-    max-width: 800px;
-  }
-
-  .statistics-pera {
-    max-width: 800px;
-    padding-bottom: 64px;
-  }
-
-  .statistics {
-    width: 800px;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 0;
-  }
-
-  .statistic {
-    width: auto;
-    flex: 1;
+  .statistics-icon img {
+    width: 28px;
+    height: 28px;
   }
 
   .vertical-line {
     display: block;
-    width: 1px;
     height: 108px;
+    width: 1px;
     background-color: #cbd5e1;
     margin: 0 20px;
   }
-
-  .statistic span {
-    font-size: 3.75rem;
-    line-height: 68px;
-  }
-
-  .statistic p {
-    font-size: 1.125rem;
-    padding-top: 16px;
-  }
 }
 
-/* Large Desktop Adjustments */
-@media (min-width: 1440px) {
-  .statistics-section {
-    padding: 100px 0;
-  }
-}
 /* statistics section styles end here */
 /* ================================ */
 /* who is it for section style start here */
-/* Who Is It For Section - Mobile First Approach */
 .whoIsItFor-section {
-  padding: 40px 16px;
-  width: 100%;
-}
-
-.primary-section {
-  /* Add your primary section styles here */
-  max-width: 1216px;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: 1rem;
-  font-weight: 600;
-  display: inline-block;
+  padding: 0 16px;
 }
 
 .whoIsIt-heading {
@@ -752,7 +636,7 @@ a {
 .whoIsIt-pera {
   font-size: 1rem;
   line-height: 1.5;
-  margin: 0 auto;
+
   max-width: 100%;
 }
 
@@ -773,6 +657,7 @@ a {
 .whoIsIt-category {
   position: relative;
   padding-left: 20px;
+  cursor: pointer;
 }
 
 .whoIs-subHeading {
@@ -809,17 +694,14 @@ a {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
-  .whoIsItFor-section {
-    padding: 60px 30px;
-  }
-
   .whoIsIt-heading {
-    font-size: 2rem;
+    font-size: 36px;
+    line-height: 44px;
   }
 
   .whoIsIt-pera {
-    max-width: 80%;
-    font-size: 1.1rem;
+    max-width: 680px;
+    text-align: left;
   }
 
   .whoIsIt-subCategory {
@@ -833,67 +715,22 @@ a {
   .whoIs-subPera {
     font-size: 1rem;
   }
-}
-
-/* Desktop Styles */
-@media (min-width: 1024px) {
-  .whoIsItFor-section {
-    padding: 80px 40px;
-  }
-
-  .whoIsIt-heading {
-    font-size: 2.5rem;
-    padding: 24px 0 16px;
-  }
-
-  .whoIsIt-pera {
-    max-width: 680px;
-  }
-
   .whoIsIt-details {
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 64px;
-    gap: 40px;
+    gap: 30px;
   }
-
-  .whoIsIt-subCategory {
-    padding-top: 62px;
-    gap: 40px;
-  }
-
-  .whoIsIt-category {
-    padding-left: 28px;
-  }
-
-  .whoIs-subPera {
-    width: 468px;
-    padding: 12px 0 24px;
-  }
-
-  .whoIs-subHeading {
-    padding-top: 24px;
-  }
-
-  .whoIsIt-detailsImg img {
-    width: 592px;
-    height: 592px;
-    max-width: none;
+  .whoIsIt-category:hover .whoIs-verticaleLine {
+    background-color: var(--textAndButton-color);
+    transition: background-color 0.3s ease-in-out;
   }
 }
 
-/* Large Desktop Adjustments */
-@media (min-width: 1440px) {
-  .whoIsItFor-section {
-    padding: 100px 0;
-  }
-}
 /* who is it for section style end here */
 /* ================================= */
 /* testimonial section style start here */
-/* Testimonials Section - Mobile First Approach */
 .testimonial-section {
+  background-color: var(--section-color2);
   padding: 40px 16px;
   width: 100%;
 }
@@ -952,7 +789,7 @@ a {
 .fa-star,
 .fa-star-half-stroke {
   color: #f59e0b;
-  font-size: 1rem;
+  font-size: 20px;
 }
 
 .reviews-pera {
@@ -979,15 +816,14 @@ a {
 }
 
 .reviewer-name {
-  font-size: 0.9rem;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.3;
 }
 
 .reviewer-profession {
-  font-size: 0.8rem;
+  font-size: 14px;
   line-height: 1.4;
-  color: #666;
 }
 .testimonial-btn button {
   width: 100%;
@@ -1007,69 +843,11 @@ a {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
-  .testimonial-section {
-    padding: 60px 30px;
-  }
-
   .testimonial-btn button {
     display: none;
   }
   .testimonial-heading {
-    font-size: 2rem;
-  }
-
-  .testimonial-pera {
-    max-width: 80%;
-    font-size: 1.1rem;
-  }
-
-  .all-reviews {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    padding-top: 50px;
-  }
-
-  .reviews {
-    padding: 24px;
-    border-radius: 16px;
-  }
-
-  .fa-star,
-  .fa-star-half-stroke {
-    font-size: 1.1rem;
-  }
-
-  .reviews-pera {
-    font-size: 1rem;
-  }
-
-  .reviewer img {
-    width: 44px;
-    height: 44px;
-  }
-
-  .reviewer-name {
-    font-size: 1rem;
-  }
-
-  .reviewer-profession {
-    font-size: 0.85rem;
-  }
-}
-
-/* Desktop Styles */
-@media (min-width: 1024px) {
-  .testimonial-section {
-    padding: 80px 40px;
-  }
-
-  .testimonial-heading {
-    font-size: 2.5rem;
-    padding: 24px 0;
-  }
-
-  .testimonial-pera {
-    max-width: 680px;
+    font-size: 36px;
   }
 
   .all-reviews {
@@ -1079,24 +857,13 @@ a {
   }
 
   .reviews {
-    max-width: 384px;
-    padding: 32px;
-    border-radius: 20px;
+    padding: 24px;
+    border-radius: 16px;
   }
 
   .fa-star,
   .fa-star-half-stroke {
-    font-size: 1.5rem;
-    width: 24px;
-  }
-
-  .reviews-pera {
-    padding: 24px 0;
-    font-size: 1rem;
-  }
-
-  .reviewer {
-    gap: 12px;
+    font-size: 24px;
   }
 
   .reviewer img {
@@ -1105,46 +872,23 @@ a {
   }
 
   .reviewer-name {
-    font-size: 1.1rem;
-    line-height: 22px;
+    font-size: 16px;
   }
 
   .reviewer-profession {
-    font-size: 0.9rem;
+    font-size: 16px;
   }
 }
 
-/* Large Desktop Adjustments */
-@media (min-width: 1440px) {
-  .testimonial-section {
-    padding: 100px 0;
-  }
-}
 /* testimonial section end start here */
 /* ============================ */
 /* Our office section style start here */
-/* Our Office Section - Mobile First Approach */
-.ourOffice-section {
-  padding: 40px 16px;
-  width: 100%;
-}
-
 .ourOffice-container {
-  max-width: 1216px;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: 1rem;
-  font-weight: 600;
-  display: inline-block;
+  padding: 0 16px;
 }
 
 .office-heading {
-  font-size: 36px;
-  line-height: 44px;
   padding: 24px 0;
-  margin: 0 auto;
 }
 
 .ourOffice-pera {
@@ -1152,7 +896,6 @@ a {
   line-height: 1.5;
   margin: 0 auto;
   max-width: 100%;
-  /* padding: 0 20px; */
 }
 
 .all-office {
@@ -1183,21 +926,8 @@ a {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
-  .ourOffice-section {
-    padding: 60px 30px;
-  }
-
-  .office-heading {
-    font-size: 2rem;
-  }
-
-  .paragraph-two {
-    max-width: 80%;
-    font-size: 1.1rem;
-  }
-
   .all-office {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     padding-top: 50px;
   }
@@ -1215,76 +945,18 @@ a {
     font-size: 1.5rem;
     padding: 20px 0 8px;
   }
-
-  .paragraph-three {
-    font-size: 1rem;
-  }
 }
 
-/* Desktop Styles */
-@media (min-width: 1024px) {
-  .ourOffice-section {
-    padding: 80px 40px;
-  }
-
-  .office-heading {
-    font-size: 2.5rem;
-    padding: 24px 0;
-  }
-
-  .paragraph-two {
-    max-width: 680px;
-  }
-
-  .all-office {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
-    padding-top: 64px;
-  }
-
-  .office {
-    width: 280px;
-    padding: 24px;
-    border-radius: 20px;
-  }
-
-  .fa-location-dot {
-    font-size: 2rem;
-  }
-
-  .location-name {
-    padding: 24px 0 8px;
-  }
-}
-
-/* Large Desktop Adjustments */
-@media (min-width: 1440px) {
-  .ourOffice-section {
-    padding: 100px 0;
-  }
-}
 /* Our office section style end here */
 /* ============================ */
 /* FAQ section style start here */
-/* FAQ Section - Mobile First Approach */
 .faq-section {
-  width: 100%;
   padding: 0 16px;
-}
-
-.primary-section {
-  max-width: 1216px;
-  margin: 0 auto;
+  background-color: var(--section-color2);
 }
 
 .faq-container {
   text-align: center;
-}
-
-.section-title {
-  font-size: 1rem;
-  font-weight: 600;
-  display: inline-block;
 }
 
 .faq-heading {
@@ -1381,17 +1053,10 @@ a {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
-  .faq-section {
-    padding: 60px 30px;
-  }
-
   .faq-heading {
-    font-size: 2rem;
-  }
-
-  .paragraph-two {
-    max-width: 80%;
-    font-size: 1.1rem;
+    font-size: 36px;
+    line-height: 44px;
+    padding: 20px 0;
   }
 
   .faq-container {
@@ -1408,56 +1073,19 @@ a {
 
   .faq-answer p {
     font-size: 1rem;
-    padding-left: 55px;
+    padding-left: 16px;
   }
 }
 
-/* Desktop Styles */
-@media (min-width: 1024px) {
-  .faq-section {
-    padding: 80px 40px;
-  }
-
-  .faq-heading {
-    font-size: 2.5rem;
-    padding: 24px 0;
-  }
-
-  .paragraph-two {
-    max-width: 800px;
-  }
-
-  .faq-container {
-    padding: 0;
-  }
-
-  .question {
-    font-size: 1.1rem;
-    line-height: 22px;
-  }
-}
-
-/* Large Desktop Adjustments */
-@media (min-width: 1440px) {
-  .faq-section {
-    padding: 100px 0;
-  }
-}
 /* FAQ section style end here */
 /* ============================ */
 /* download the app section style start here */
-/* Download The App Section - Mobile First Approach */
-/* Download The App Section - Mobile First Approach */
+
 .downloadTheApp-section {
   background-color: var(--section-color3);
   padding: 130px 16px;
   position: relative;
   /* overflow: hidden; */
-}
-
-.secondary-section {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .downloadApp-details {
@@ -1471,7 +1099,7 @@ a {
   text-align: center;
 }
 
-.section-header {
+.downloadApp-header {
   font-size: 30px;
   line-height: 38px;
   text-align: left;
@@ -1532,73 +1160,64 @@ a {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
-  .downloadTheApp-section {
-    padding: 80px 30px;
-  }
-
-  .section-header {
+  .downloadApp-header {
     font-size: 2rem;
   }
-
-  .downloadApp-pera {
-    font-size: 1.1rem;
-    max-width: 80%;
+  .downloadApp-details {
+    position: relative;
   }
 
-  .downloadApp-buttons {
-    flex-direction: row;
-    justify-content: center;
-    gap: 16px;
+  .downloadApp-1stImg {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    width: 50%;
+    max-width: 162px;
   }
 
-  .downloadApp-img {
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 60px;
+  .downloadApp-2ndImg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    max-width: 162px;
   }
 
   .downloadApp-1stImg img,
   .downloadApp-2ndImg img {
-    max-width: 280px;
-  }
-}
-
-/* Desktop Styles */
-@media (min-width: 1024px) {
-  .downloadTheApp-section {
-    padding: 100px 40px;
-  }
-
-  .section-header {
-    font-size: 2.5rem;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .downloadApp-pera {
+    font-size: 1.1rem;
     max-width: 560px;
-    padding: 24px 0 48px;
   }
 
-  .downloadApp-img {
-    gap: 60px;
-    margin-top: 80px;
+  .downloadApp-buttons {
+    flex-direction: row;
+    justify-content: start;
+    gap: 16px;
+  }
+  .downloadApp-buttons button {
+    padding: 12px 24px;
+    font-size: 1rem;
   }
 
-  .downloadApp-1stImg img {
-    max-width: 300px;
-  }
-
-  .downloadApp-2ndImg img {
-    max-width: 352px;
+  .lean-more,
+  .get-started {
+    width: auto;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
   }
 }
 
-/* Large Desktop Adjustments */
-@media (min-width: 1440px) {
-  .downloadTheApp-section {
-    padding: 120px 0;
-  }
-}
 /* download the app section end start here */
 /* ============================== */
 /* footer section style start here */
@@ -1655,15 +1274,10 @@ a {
 /* Responsive Styles */
 @media (min-width: 768px) {
   .footer-items {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer-items {
     grid-template-columns: repeat(6, 1fr);
   }
 }
+
 /* Copyright Section - Mobile First Approach */
 .copyright-container {
   background-color: #f8fafc;
@@ -1735,41 +1349,4 @@ a {
   }
 }
 
-/* Desktop Styles */
-@media (min-width: 1024px) {
-  .copyright-logo img {
-    width: 150px;
-  }
-
-  .copyright-text {
-    font-size: 1rem;
-  }
-}
 /* footer section style end here */
-
-/* -------------------- Responsive style start here ----------------- */
-/* navbar section responsive start here */
-/* Remove the .bar styles and replace with your icon styling */
-
-/* navbar section responsive end here */
-/* banner section responsive start here */
-/* banner section responsive end here */
-/* company name section responsive start here */
-/* company name section responsive end here */
-/* features section responsive start here */
-/* features section responsive end here */
-/* statistics section responsive start here */
-/* statistics section responsive end here */
-/* who is it for section responsive start here */
-/* who is it for section responsive end here */
-/* testimonial section responsive start here */
-/* testimonial section responsive end here */
-/* Our office section responsive start here */
-/* Our office section responsive end here */
-/* FAQ section responsive start here */
-/* FAQ section responsive end here */
-/* download the app section responsive start here */
-/* download the app section responsive end here */
-/* footer section responsive start here */
-/* footer section responsive end here */
-/* -------------------- Responsive style end here ----------------- */

@@ -1082,10 +1082,10 @@ a {
 /* download the app section style start here */
 
 .downloadTheApp-section {
+  padding: 0 16px;
   background-color: var(--section-color3);
-  padding: 130px 16px;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .downloadApp-details {
@@ -1095,8 +1095,11 @@ a {
 }
 
 .downloadApp-content {
-  order: 1;
+  /* order: 1; */
   text-align: center;
+}
+.downloadTheApp-container {
+  overflow: hidden;
 }
 
 .downloadApp-header {
@@ -1114,7 +1117,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 100%; /* Full width container */
+  width: 100%;
 }
 
 .lean-more,
@@ -1130,9 +1133,9 @@ a {
 }
 
 .downloadApp-img {
-  order: 2;
+  /* order: 2; */
   position: relative;
-  min-height: 300px; /* Give space for absolute positioning */
+  min-height: 300px;
   margin-top: 40px;
 }
 .downloadApp-1stImg {
@@ -1161,33 +1164,41 @@ a {
 /* Tablet Styles */
 @media (min-width: 768px) {
   .downloadApp-header {
-    font-size: 2rem;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: left;
   }
-  .downloadApp-details {
+  .downloadApp-img {
     position: relative;
+    width: 50%;
+    height: 500px;
   }
-
   .downloadApp-1stImg {
     position: absolute;
-    left: 50%;
-    top: 0px;
+    left: 20px;
+    top: 30px;
     width: 50%;
-    max-width: 162px;
+    max-width: 354px;
   }
-
   .downloadApp-2ndImg {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -60px;
+    top: -194px;
     width: 50%;
-    max-width: 162px;
+    max-width: 354px;
   }
 
-  .downloadApp-1stImg img,
+  .downloadApp-1stImg img {
+    width: 100%;
+  }
   .downloadApp-2ndImg img {
     width: 100%;
-    height: auto;
-    display: block;
+  }
+
+  .downloadApp-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .downloadApp-pera {
@@ -1209,7 +1220,7 @@ a {
   .get-started {
     width: auto;
     padding: 12px 24px;
-    border-radius: 8px;
+    border-radius: 30px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -1261,10 +1272,11 @@ a {
 }
 
 .footer-links a {
-  color: #64748b;
+  color: var(--text-color1);
   text-decoration: none;
   transition: color 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .footer-links a:hover {
